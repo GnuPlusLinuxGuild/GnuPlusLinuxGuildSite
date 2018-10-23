@@ -4,9 +4,7 @@ mono: none
 dotnet: 2.1.300
 solution: GnuPlusLinux.sln
 
-build:
-- dotnet restore
-
 script:
-- dotnet build
-- dotnet test GnuPlusLinuxTestSuite/GnuPlusLinuxTestSuite.csproj
+- cd GnuPlusLinuxTestSuite
+- dotnet restore
+- dotnet test GnuPlusLinuxTestSuite.csproj
