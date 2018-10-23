@@ -3,9 +3,6 @@ dist: trusty
 mono: none
 solution: GnuPlusLinux.sln
 
-install:
-- dotnet restore
-
 script:
 - dotnet build
-- dotnet test GnuPlusLinuxTestSuite\GnuPlusLinuxTestSuite.csproj
+- dotnet test GnuPlusLinuxTestSuite/GnuPlusLinuxTestSuite.csproj
