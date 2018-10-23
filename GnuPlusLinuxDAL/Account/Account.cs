@@ -32,7 +32,7 @@ namespace GnuPlusLinuxDAL
 		public bool isMod { get; set; }
 
 		// Toon Specific Information
-		public string ToonName    { get; set; }
+		public string toonName    { get; set; }
 		public byte   toonClass   { get; set; }
 		public byte   role        { get; set; }
 		public byte   profession1 { get; set; }
