@@ -1,4 +1,6 @@
 language: csharp
+dist: trusty
+mono: none
 solution: GnuPlusLinux.sln
 
 install:
