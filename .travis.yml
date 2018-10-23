@@ -6,5 +6,4 @@ solution: GnuPlusLinux.sln
 
 script:
 - cd GnuPlusLinuxTestSuite
-- dotnet restore
-- dotnet test GnuPlusLinuxTestSuite.csproj
+- dotnet test GnuPlusLinuxTestSuite.csproj -c Release -f netcoreapp2.1
