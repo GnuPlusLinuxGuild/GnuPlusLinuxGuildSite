@@ -35,7 +35,7 @@ namespace GnuPlusLinux.Controllers
 
             model.account = currentAccount;
 
-            return View(model);
+            return View("Register", model);
         }
 
         [HttpPost]
@@ -60,10 +60,12 @@ namespace GnuPlusLinux.Controllers
                 }
 
                 _context.SaveChanges();
-                return RedirectToAction("Register", new { id = userAccount.accountId });
+                return RedirectToAction("Register", new 
+                    { id = userAccount.accountId });
             }
 
-            return View(model);
+            model.account = userAccount;
+            return View("Register", model);
         }
     }
 }

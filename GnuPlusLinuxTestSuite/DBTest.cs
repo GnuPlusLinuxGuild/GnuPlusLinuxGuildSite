@@ -15,10 +15,7 @@ namespace GnuPlusLinuxTestSuite
 		{
 			IConfiguration config = new ConfigurationBuilder().Build();
 
-			// Just use localDB for testing
-			string connectionString = 
-				"Server=(localdb)\\mssqllocaldb;Database=GNUPlusLinux;" +
-				"Trusted_Connection=True;MultipleActiveResultSets=true";
+            string connectionString = "connectionString";
 
 			DbContextOptions<AccountContext> DbContextOptions = 
 				new DbContextOptionsBuilder<AccountContext>()

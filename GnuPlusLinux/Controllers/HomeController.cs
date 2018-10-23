@@ -23,7 +23,7 @@ namespace GnuPlusLinux.Controllers
         public IActionResult Index()
         {
             IndexViewModel model = new IndexViewModel(HomePageTitle);
-            return View(model);
+            return View("Index", model);
         }
 
         [HttpGet]
@@ -32,14 +32,14 @@ namespace GnuPlusLinux.Controllers
             RegistrationViewModel model =
                 new RegistrationViewModel(RegistrationPageTitle);
 
-            return View(model);
+            return View("Registration", model);
         }
 
         [HttpGet]
         public IActionResult Login()
         {
             LoginViewModel model = new LoginViewModel(LoginPageTitle);
-            return View(model);
+            return View("Login", model);
         }
 
         [HttpGet]
@@ -50,7 +50,7 @@ namespace GnuPlusLinux.Controllers
 
             model.message = "GNU + Linux application";
 
-            return View(model);
+            return View("Application", model);
         }
 
         [HttpGet]
@@ -77,7 +77,7 @@ namespace GnuPlusLinux.Controllers
             model.addons = TokyoDummyText;
             model.recruitment = ParisDummyText;
 
-            return View(model);
+            return View("Information", model);
         }
 
         [HttpGet]
@@ -85,7 +85,8 @@ namespace GnuPlusLinux.Controllers
             NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id 
+                ?? HttpContext.TraceIdentifier });
         }
     }
 }
