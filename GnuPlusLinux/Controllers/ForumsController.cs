@@ -14,8 +14,7 @@ namespace GnuPlusLinux.Controllers
             IndexViewModel model = new IndexViewModel(IndexTitle);
             model.message = "Welcome to the GNU Plus Linux Fourms";
 
-            return View(model);
+            return View("Index", model);
         }
-
     }
 }
